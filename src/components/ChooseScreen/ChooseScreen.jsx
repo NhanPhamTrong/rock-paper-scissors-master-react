@@ -18,7 +18,7 @@ const OriginalMode = (props) => {
                         whileHover={props.buttonOnHover}
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => props.ClickButton(e)}>
-                            <span></span>
+                            <span>.</span>
                     </motion.button>
                 ))}
 
@@ -45,7 +45,7 @@ const BonusMode = (props) => {
                         whileHover={props.buttonOnHover}
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => props.ClickButton(e)}>
-                            <span></span>
+                            <span>.</span>
                     </motion.button>
                 ))}
 
