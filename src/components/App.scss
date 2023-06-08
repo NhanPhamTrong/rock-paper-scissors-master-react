@@ -1,0 +1,157 @@
+@import "../assets/global-styles/global-styles";
+
+header {
+    width: 80%;
+    margin-top: 1.875rem;
+    padding: 0.625rem;
+    border: $primary solid 2px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+        color: $on-background;
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1rem;
+        }
+    }
+
+    .score-section {
+        height: 5rem;
+        padding: 0 1.25rem;
+        background: $surface;
+        border-radius: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 1rem;
+            color: $on-surface;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            color: $on-surface-variant;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .main-footer {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .switch-section {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            p {
+                color: $on-background-dark;
+                pointer-events: none;
+                position: absolute;
+                left: 2.25rem;
+                z-index: 1;
+                letter-spacing: 1px;
+                transition: 0.2s;
+            }
+
+            .switch-mode {
+                height: 2rem;
+                width: 6rem;
+                background: $on-background;
+                border-radius: 10rem;
+                position: relative;
+            }
+    
+            .switch-mode:before {
+                content: "";
+                height: 1.5rem;
+                width: 1.5rem;
+                background: $on-background-dark;
+                border-radius: 10rem;
+                position: absolute;
+                left: 0.25rem;
+                top: 0.25rem;
+                transition: 0.2s;
+            }
+        }
+
+        .switch-section.active {
+            p {
+                left: 0.5rem;
+            }
+
+            .switch-mode:before {
+                left: 4.25rem;
+            }
+        }
+
+        .rules-btn {
+            padding: 0.625rem 2rem;
+            border: $on-background solid 2px;
+            border-radius: 0.5rem;
+            color: $on-background;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    
+    .attribution {
+        color: $on-background;
+        width: max-content;
+        font-size: 0.75rem;
+
+        a {
+            color: $on-surface-variant;
+            font-weight: 700;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        width: 45rem;
+
+        .title {
+            p {
+                font-size: 1.75rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        .score-section {
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    main {
+        .main-footer {
+            width: 45rem;
+        }
+    }
+}
