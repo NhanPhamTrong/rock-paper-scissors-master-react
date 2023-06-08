@@ -14,11 +14,11 @@ const OriginalMode = (props) => {
                         key={index}
                         className={option.name}
                         type="button"
-                        order={option.order}
+                        name={option.order}
                         whileHover={props.buttonOnHover}
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => props.ClickButton(e)}>
-                            <div></div>
+                            <span></span>
                     </motion.button>
                 ))}
 
@@ -41,11 +41,11 @@ const BonusMode = (props) => {
                         key={index}
                         className={option.name}
                         type="button"
-                        order={option.order}
+                        name={option.order}
                         whileHover={props.buttonOnHover}
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => props.ClickButton(e)}>
-                            <div></div>
+                            <span></span>
                     </motion.button>
                 ))}
 
@@ -60,7 +60,7 @@ const BonusMode = (props) => {
 
 export const ChooseScreen = (props) => {
     const ClickButton = (e) => {
-        props.ClickButton(parseInt(e.currentTarget.getAttribute("order")))
+        props.ClickButton(parseInt(e.currentTarget.getAttribute("name")))
     }
 
     const buttonOnHover = {

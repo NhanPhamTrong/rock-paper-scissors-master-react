@@ -121,7 +121,7 @@ export const App = () => {
                         <button
                             className="switch-mode"
                             type="button"
-                            onClick={ClickSwitchMode}></button>
+                            onClick={ClickSwitchMode}>.</button>
                     </div>
                     <button
                         className="rules-btn"
